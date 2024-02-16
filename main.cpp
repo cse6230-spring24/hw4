@@ -56,6 +56,8 @@ void init_particles(particle_t* parts, int num_parts, double size, int part_seed
         std::uniform_real_distribution<float> rand_real(-1.0, 1.0);
         parts[i].vx = rand_real(gen);
         parts[i].vy = rand_real(gen);
+        parts[i].ax = 0;
+        parts[i].ay = 0;
     }
 
     for (int i = 0; i < num_parts; ++i) {

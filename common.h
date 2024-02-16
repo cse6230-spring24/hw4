@@ -22,6 +22,10 @@ typedef struct particle_t {
     double vy;   // Velocity Y
     double ax;   // Acceleration X
     double ay;   // Acceleration Y
+
+    bool operator==(const particle_t& other) const {
+        return id == other.id;
+    }
 } particle_t;
 
 extern MPI_Datatype PARTICLE;
